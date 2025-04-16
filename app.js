@@ -1,9 +1,14 @@
 // importo express
 const express = require('express');
+
 // inizializzo express nella variabile app
 const app = express();
+
 // definisco il numero di porta
 const port = 3000;
+
+// aggiungo lo strumento per recuperare gli asset statici
+app.use(express.static('public'))
 
 // definisco la rotta base
 app.get('/', (req, res) => {
@@ -11,13 +16,13 @@ app.get('/', (req, res) => {
     res.send(landingPgace)
 });
 
-// definisco la seconda rotta 
+// definisco la seconda rotta dove visualizzare i post
 app.get('/bacheca', (req, res) => {
     let post = [
         {
             title: 'Ciambellone',
             content: 'un dolce per tutte le occasioni',
-            image: 'imgs/ciambellone.jpeg',
+            image: "<img src = 'http://localhost:3000./imgs/ciambellone.jpeg'>",
             tags: ['burro', 'zucchero', 'uova'],
         },
         {
@@ -29,12 +34,12 @@ app.get('/bacheca', (req, res) => {
         {
             title: 'Pane Fritto',
             content: 'Quando non hai nulla in casa ma hai voglia di dolce',
-            image: 'imgs/pande_fritto_dolce.jpeg',
+            image: 'imgs/pane_fritto_dolce.jpeg',
             tags: ['zucchero', 'pane', 'olio di semi'],
         },
         {
             title: 'Pasta alla Barbabietola',
-            content: 'quando vuoi stupire tutti con un piatto eccentrico',
+            content: 'Quando vuoi stupire tutti con un piatto eccentrico',
             image: 'imgs/pasta_barbabietloa.jpeg',
             tags: ['pasta', 'barbabietole', 'condimento a piacere'],
         },
