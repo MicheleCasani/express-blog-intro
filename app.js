@@ -50,7 +50,7 @@ app.get('/bacheca', (req, res) => {
             tags: ['burro', 'zucchero', 'uova', 'cioccolato', 'semi'],
         },
     ];
-    res.send(post)
+    res.json(post)
 });
 
 // dico al server di rimanere in ascolto sulla porta assegnata, ovvero 3000
