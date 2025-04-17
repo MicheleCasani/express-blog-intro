@@ -12,8 +12,8 @@ app.use(express.static('public'))
 
 // definisco la rotta base
 app.get('/', (req, res) => {
-    let landingPgace = 'Server del mio blog'
-    res.send(landingPgace)
+    let landingPage = 'Server del mio blog'
+    res.send(landingPage)
 });
 
 // definisco la seconda rotta dove visualizzare i post
