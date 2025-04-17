@@ -22,7 +22,7 @@ app.get('/bacheca', (req, res) => {
         {
             title: 'Ciambellone',
             content: 'un dolce per tutte le occasioni',
-            image: "<img src = 'http://localhost:3000./imgs/ciambellone.jpeg'>",
+            image: 'imgs/ciambellone.jpeg',
             tags: ['burro', 'zucchero', 'uova'],
         },
         {
